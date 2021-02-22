@@ -1,0 +1,167 @@
+:root {
+    --bg-color: #091921;
+    --bg-white: snow;
+    --bg-gray: #777B7E;
+    --bg-red: #FF105E;
+    --shadow-white: rgba(255, 255, 255, 0.05);
+    --shadow-black: rgba(0, 0, 0, 0.3);
+
+
+    --bg-color2: snow;
+    --bg-white2: #091921;
+    --shadow-white2: rgba(0, 0, 0, 0.3);
+    --shadow-black2: rgba(255, 255, 255, 0.05);
+}
+/*
+html[data-theme='dark'] {
+    :root {
+        --bg-color: snow;
+        --bg-white: #091921;
+        --bg-gray: #777B7E;
+        --bg-red: #FF105E;
+        --shadow-white: rgba(0, 0, 0, 0.3);
+        --shadow-black: rgba(255, 255, 255, 0.05);
+    }
+}
+*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.div-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    background-color: var(--bg-color);
+
+    transition: 0.4s;
+}
+.clock {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('img/clock.png');
+    background-size: cover;
+    background-position: center;
+    border: 4px solid var(--bg-color);
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px var(--shadow-white),
+                inset 0 -15px 15px var(--shadow-white),
+                0 15px 15px var(--shadow-black),
+                inset 0 15px 15px var(--shadow-black);
+
+    transition: 0.4s;
+}
+.clock-dot {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: var(--bg-white);
+    border-radius: 50%;
+    z-index: 10;
+}
+.hour, .minutes, .seconds {
+    position: absolute;
+}
+.hour, .hr {
+    width: 160px;
+    height: 160px;
+}
+.minutes, .min {
+    width: 190px;
+    height: 190px;
+}
+.seconds, .sec {
+    width: 230px;
+    height: 230px;
+}
+.hr, .min, .sec {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    position: absolute;
+    border-radius: 50%;
+}
+.hr-line {
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background-color: var(--bg-red);
+    z-index: 1;
+    border-radius: 6px 6px 0 0;
+}
+.min-line {
+    position: absolute;
+    width: 4px;
+    height: 110px;
+    background-color: var(--bg-white);
+    z-index: 2;
+    border-radius: 6px 6px 0 0;
+}
+.sec-line {
+    position: absolute;
+    width: 2px;
+    height: 140px;
+    background-color: var(--bg-white);
+    opacity: 0.5;
+    z-index: 3;
+    border-radius: 6px 6px 0 0;
+}
+
+
+.div-check-btn {
+    margin: 0 auto;
+    width: 100%;
+    height: 5vh;
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: flex-end;
+
+    transition: 0.4s;
+}
+.check-btn {
+    width: 20%;
+    padding: 0 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.check {
+    position: relative;
+    width: 35px;
+    height: 15px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--bg-gray);
+    outline: none;
+    border-radius: 20px;
+    transition: 0.4s;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.4),
+                inset 1px 1px 3px rgba(0, 0, 0, 0.2),
+                1px 1px 3px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+.check:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: var(--bg-white);
+    border-radius: 50%;
+    transform: scale(1.1);
+    transition: 0.4s;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.4),
+                inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+
+}
+.check:checked {
+    background-color: var(--bg-red);
+}
+.check:checked:before {
+    left: calc(100% - 15px);
+}
