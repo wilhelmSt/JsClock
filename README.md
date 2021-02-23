@@ -1,5 +1,5 @@
 # Clock with Javascrpit
-Um relógio analógico desenvolvido com Html, Css e Javascript, com modo de theme dark e light.
+Um relógio analógico e digital desenvolvido com Html, Css e Javascript, com modo de theme dark e light.
 
 <br />
 <p align="center">  
@@ -25,7 +25,7 @@ Um relógio analógico desenvolvido com Html, Css e Javascript, com modo de them
 
 
 ## Sobre o projeto
-Projeto realizado no intuito de desenvolver um relógio analógico para aprimorar conhecimentos de html, css e javascript.
+Projeto realizado no intuito de desenvolver um relógio analógico e digital com dois temas para aprimorar conhecimentos de html, css e javascript.
 
 ### Desenvolvimento
 Projeto desenvolvido com html, css e javascript.
@@ -40,4 +40,4 @@ Wilhelm Steins - wilhelmsteins@gmail.com
 [Link do Projeto](https://github.com/wilhelmSt/JsClock)
 
 ## Conhecimentos
-Todos conhecimentos retirados da [W3schools](https://www.w3schools.com/python/default.asp) e de uma canal no youtube [OnlineTutorials](https://www.youtube.com/c/OnlineTutorials4Designers/featured)
+Todos conhecimentos retirados da [W3schools](https://www.w3schools.com/) e de uma canal no youtube [OnlineTutorials](https://www.youtube.com/c/OnlineTutorials4Designers/featured)

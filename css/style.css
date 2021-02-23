@@ -1,0 +1,309 @@
+:root {
+    --bg-color2: #091921;
+    --bg-white2: snow;
+    --bg-gray: #777B7E;
+    --bg-red: #FF105E;
+    --shadow-white2: rgba(255, 255, 255, 0.05);
+    --shadow-black2: rgba(0, 0, 0, 0.3);
+
+
+    --bg-color: snow;
+    --bg-white: #091921;
+    --shadow-white: rgba(0, 0, 0, 0.3);
+    --shadow-black: rgba(255, 255, 255, 0.05);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.div-body-analogic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background-color: rgb(220,220,220);
+    transition: 0.4s;
+
+    display: none;
+}
+.clock {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/clock.png');
+    background-size: cover;
+    background-position: center;
+    border: 4px solid rgb(220,220,220);
+    border-radius: 50%;
+    box-shadow: 0 -15px 15px var(--shadow-white),
+                inset 0 -15px 15px var(--shadow-white),
+                0 15px 15px var(--shadow-black),
+                inset 0 15px 15px var(--shadow-black);
+
+    transition: 0.4s;
+}
+.clock-dot {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background-color: var(--bg-white);
+    border-radius: 50%;
+    z-index: 10;
+}
+.hour, .minutes, .seconds {
+    position: absolute;
+}
+.hour, .hr {
+    width: 160px;
+    height: 160px;
+}
+.minutes, .min {
+    width: 190px;
+    height: 190px;
+}
+.seconds, .sec {
+    width: 230px;
+    height: 230px;
+}
+.hr, .min, .sec {
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    position: absolute;
+    border-radius: 50%;
+}
+.hr-line {
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background-color: var(--bg-red);
+    z-index: 1;
+    border-radius: 6px 6px 0 0;
+}
+.min-line {
+    position: absolute;
+    width: 4px;
+    height: 110px;
+    background-color: var(--bg-white);
+    z-index: 2;
+    border-radius: 6px 6px 0 0;
+
+    transition: 0.4s;
+}
+.sec-line {
+    position: absolute;
+    width: 2px;
+    height: 140px;
+    background-color: var(--bg-white);
+    opacity: 0.5;
+    z-index: 3;
+    border-radius: 6px 6px 0 0;
+}
+
+
+
+
+
+
+.div-body-digital {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    background-color: rgb(220,220,220);
+    transition: 0.4s;
+}
+.digital {
+    display: flex;
+    width: 80%;
+    max-width: 730px;
+    height: 20vh;
+    min-height: 200px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+
+    background-color: #091921;
+    border-radius: 10px;
+
+    box-shadow: 0 -15px 15px var(--shadow-white),
+                inset 0 -15px 15px var(--shadow-white),
+                0 15px 15px var(--shadow-black),
+                inset 0 15px 15px var(--shadow-black);
+
+    
+    transition: 0.4s;
+}
+.dia, .hora, .minutos, .segundos {
+    font-size: 52px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-end;
+    padding: 30px 0;
+    z-index: 3;
+    text-align: center;
+    width: 115px;
+    height: 135px;
+    position: relative;
+
+    color: var(--bg-color);
+    transition: 0.4s;
+
+    background-clip: padding-box;
+    border-width: 3px;
+    border-style: solid;
+    border-image: linear-gradient(135deg, var(--bg-color2), navy, purple, rgb(220,220,220)) 1;
+}
+.dia p, .hora p, .minutos p, .segundos p {
+    font-size: 16px;
+    text-align: center;
+    color: blueviolet;
+    opacity: 0.7;
+}
+.am-pm {
+    margin-left: 30px;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    
+    flex-direction: column;
+    width: 140px;
+    cursor: pointer;
+    color: var(--bg-color);
+}
+.am-pm div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.am, .pm {
+    transition: 2s;
+}
+.btn-am-pm {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-am-pm input {
+    width: 45px;
+    height: 18px;
+    margin: 0 auto;
+    outline: none;
+    appearance: none;
+    background-color: var(--bg-gray);
+    border-radius: 20px;
+    box-shadow: 0px 0px 3px white, inset 0px 0px 4px white;
+    position: relative;
+    transition: 1s;
+}
+.btn-am-pm input::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: aliceblue;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    transform: scale(0.85);
+    box-shadow: 0px 0px 3px black, inset 0px 0px 4px black;
+    transition: 1s;
+}
+.btn-am-pm input:checked {
+    background-color: var(--bg-red);
+}
+.btn-am-pm input:checked:before {
+    left: calc(100% - 18px);
+}
+
+
+
+
+
+.div-check-btn {
+    margin: 0 auto;
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(220,220,220);
+    display: flex;
+    justify-content: space-between;
+
+    transition: 0.4s;
+    box-shadow: 1px 2px 10px gray, 1px 2px 10px gray, inset -1px 2px 10px gray;
+}
+.change-clock {
+    padding: 0 15px;
+    display: flex;
+    width: 20%;
+    max-width: 200px;
+    flex-direction: column;
+    font-size: 20px;
+    justify-content: center;
+}
+.change-clock h4 {
+    margin-bottom: 6px;
+    color: var(--bg-white);
+}
+.relogios {
+    color: var(--bg-red);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.relogio-analogico, .relogio-digital {
+    cursor: pointer;
+}
+.relogio-analogico:hover, .relogio-digital:hover {
+    color: blueviolet;
+}
+.check-btn {
+    width: 20%;
+    padding: 0 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.check {
+    position: relative;
+    width: 35px;
+    height: 15px;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: var(--bg-gray);
+    outline: none;
+    border-radius: 20px;
+    transition: 0.4s;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.4),
+                inset 1px 1px 3px rgba(0, 0, 0, 0.2),
+                1px 1px 3px rgba(0,0,0,0.4);
+    cursor: pointer;
+}
+.check:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: var(--bg-white2);
+    border-radius: 50%;
+    transform: scale(1.1);
+    transition: 0.4s;
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.4),
+                inset 1px 1px 2px rgba(0, 0, 0, 0.2);
+
+}
+.check:checked {
+    background-color: var(--bg-red);
+}
+.check:checked:before {
+    left: calc(100% - 15px);
+}

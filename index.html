@@ -5,11 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Analog Clock</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
-<div class="div-body">
+<div class="div-body-analogic">
     <div class="clock-dot"></div> <!--div.clock-dot-->
     <div class="clock">
         <div class="hour">
@@ -30,13 +34,61 @@
             </div> <!--div.sec div#sec-->
         </div> <!--div.seconds-->
     </div> <!--div.clock-->
-</div> <!--div.div-body-->
+</div> <!--div.div-body-analogic-->
+
+<div class="div-body-digital">
+    <div class="digital">
+
+        <div class="dia">
+            <span></span>
+            <p>Weekday</p>
+        </div> <!--div.dia-->
+
+        <div class="hora">
+            <span>22</span>
+            <p>Hour</p>
+        </div> <!--div.hora-->
+
+        <div class="minutos">
+            <span>22</span>
+            <p>Minutes</p>
+        </div> <!--div.minutos-->
+        
+        <div class="segundos">
+            <span>22</span>
+            <p>Seconds</p>
+        </div> <!--div.segundos-->
+
+        <div class="am-pm">
+            <div>
+                <div class="am">AM</div> <!--div.am-->
+                <div class="pm">PM</div> <!--div.pm-->
+            </div>
+
+            <div class="btn-am-pm">
+                <input type="checkbox" class="btn-ampm" />
+            </div> <!--div.btn-am-pm-->
+        </div> <!--div.am-pm-->
+    </div> <!--div.digital-->
+    
+</div> <!--div.div-body-digital-->
+
 
 <div class="div-check-btn">
+
+    <div class="change-clock">
+        <h4>Type of Clock</h4>
+        <div class="relogios">
+            <div class="relogio-analogico" onclick="clockChanger('analogico')">Analogico</div> <!--div.relogio-analogico-->
+            <div class="relogio-digital" onclick="clockChanger('digital')">Digital</div> <!--div.relogio-digital-->
+        </div> <!--div.relogios-->
+    </div> <!--div.change-clock-->
+
     <div class="check-btn">
         <input type="checkbox" class="check" onclick="themeChanger()" />
     </div> <!--div.check-btn-->
+    
 </div> <!--div.div-check-btn-->
-<script src="script.js" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>
